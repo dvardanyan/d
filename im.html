@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>barev dzez</title>
+		<script src = "im.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/threejs/r76/three.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+		  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+		  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>s"></script>
+	</head>
+	<body>
+	
+      <div id ="m"></div>
+		<script type = "text/babel">
+		 class Add extends React.Component {
+		  componentDidMount(){
+		   console.log("i am here");
+		   }
+		 render() {
+		   return <h1>asd {this.props.name}</h1>
+		   }
+		   }
+			
+		ReactDOM.render(<Add name = "jhon" />,document.getElementById("m"));
+		class Head extends React.Component {
+		 constructor(props){
+		  super(props);
+		  this.state = {
+		    name:"davo",
+			race:"jew",
+			age:20
+			}
+			}
+			shout(){
+			 alert("gora");
+			 }
+		   render() {
+		     
+			 const stil = {
+			   color:"blue",
+			   textAlign:"center",
+			   backgroundColor:"grey"
+			   }
+			   return (
+			 <div>
+			   <div>barev {this.state.name}</div>
+			   <h1 style = {stil}>hajox {this.state.race}</h1>
+			   <p> ures? {this.state.age}</p>
+			   <input type ="text" />
+			   <button onClick={this.shout}>forclick</button>
+			  </div>
+			)}
+			}
+		ReactDOM.render(<Head />,document.getElementById("m"))
+		</script>		
+	</body>
+</html>
